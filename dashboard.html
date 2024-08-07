@@ -22,59 +22,53 @@
     </div>
     
     <main>
-        <section id="dashboard">
-            <h2>Dashboard</h2>
-            
-            <!-- Health Metrics Section -->
-            <div class="metrics">
-                <div class="metric-card">
-                    <h3>BMI</h3>
-                    <p>22.5</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Calories Burned Today</h3>
-                    <p>500 kcal</p>
-                </div>
-                <!-- Add more metric cards as needed -->
+        <h2>Dashboard</h2>
+        
+        <!-- Health Metrics Section -->
+        <div class="metrics">
+            <div class="metric-card">
+                <h3>BMI</h3>
+                <p>22.5</p>
             </div>
-            
-            <!-- Recent Activities Section -->
-            <div class="recent-activities">
-                <h3>Recent Activities</h3>
-                <ul id="activity-list">
-                    <!-- Placeholder for recent activities -->
-                    <li>Running - 30 minutes</li>
-                    <li>Yoga - 45 minutes</li>
-                    <!-- Future activities will be dynamically added here -->
-                </ul>
+            <div class="metric-card">
+                <h3>Calories Burned Today</h3>
+                <p>500 kcal</p>
             </div>
+        </div>
+        
+        <!-- Recent Activities Section -->
+        <div class="recent-activities">
+            <h3>Recent Activities</h3>
+            <ul id="activity-list">
+                <li>Running - 30 minutes</li>
+                <li>Yoga - 45 minutes</li>
+            </ul>
+        </div>
 
-            <!-- Activity Logging Form -->
-            <div class="activity-logging">
-                <h3>Log a New Activity</h3>
-                <form id="activityForm">
-                    <label for="activityType">Activity Type:</label>
-                    <input type="text" id="activityType" name="activityType" required>
+        <!-- Activity Logging Form -->
+        <div class="activity-logging">
+            <h3>Log a New Activity</h3>
+            <form id="activityForm">
+                <label for="activityType">Activity Type:</label>
+                <input type="text" id="activityType" name="activityType" required>
 
-                    <label for="activityDuration">Duration (minutes):</label>
-                    <input type="number" id="activityDuration" name="activityDuration" required>
+                <label for="activityDuration">Duration (minutes):</label>
+                <input type="number" id="activityDuration" name="activityDuration" required>
 
-                    <label for="activityDate">Date:</label>
-                    <input type="date" id="activityDate" name="activityDate" required>
+                <label for="activityDate">Date:</label>
+                <input type="date" id="activityDate" name="activityDate" required>
 
-                    <button type="submit">Log Activity</button>
-                </form>
-            </div>
-            
-            <!-- Data Visualization Section -->
-            <div class="data-visualization">
-                <h3>Your Activity Over Time</h3>
-                <canvas id="activityChart" width="400" height="200"></canvas>
-                <!-- Placeholder for future data visualization -->
-            </div>
+                <button type="submit">Log Activity</button>
+            </form>
+        </div>
+        
+        <!-- Data Visualization Section -->
+        <div class="data-visualization">
+            <h3>Your Activity Over Time</h3>
+            <canvas id="activityChart" width="400" height="200"></canvas>
+        </div>
 
-            <button id="logoutButton">Logout</button>
-        </section>
+        <button id="logoutButton">Logout</button>
     </main>
 
     <footer>
