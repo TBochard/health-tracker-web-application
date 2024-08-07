@@ -1,5 +1,3 @@
-// integration.test.js
-
 // Test the full user signup to dashboard flow
 test('User signup to dashboard flow', () => {
     document.body.innerHTML = `
