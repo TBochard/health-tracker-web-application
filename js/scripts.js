@@ -1,33 +1,32 @@
 // scripts.js
 
-// Mock session handling using localStorage
-function isLoggedIn() {
-    return localStorage.getItem('loggedIn') === 'true';
-}
+// Utility function to get an element by ID
+const $ = (id) => document.getElementById(id);
 
-function loginUser() {
+// Mock session handling using localStorage
+const isLoggedIn = () => localStorage.getItem('loggedIn') === 'true';
+
+const loginUser = () => {
     localStorage.setItem('loggedIn', 'true');
     window.location.href = 'dashboard.html';
-}
+};
 
-function logoutUser() {
+const logoutUser = () => {
     localStorage.removeItem('loggedIn');
     window.location.href = 'login.html';
-}
+};
 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
+// Email validation using regex
+const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
 
 // Handle Signup Form Submission
-document.getElementById('signupForm')?.addEventListener('submit', function(event) {
+$('signupForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const fullName = document.getElementById('fullName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+    const fullName = $('fullName').value.trim();
+    const email = $('email').value.trim();
+    const password = $('password').value;
+    const confirmPassword = $('confirmPassword').value;
 
     if (password !== confirmPassword) {
         alert('Passwords do not match');
@@ -40,29 +39,25 @@ document.getElementById('signupForm')?.addEventListener('submit', function(event
     }
 
     // Assuming basic validation passed, proceed with form submission
-    console.log('Form Submitted:', {
-        fullName,
-        email,
-        password
-    });
+    console.log('Form Submitted:', { fullName, email, password });
 
     // Simulate user login after successful signup
     loginUser();
 
     // Clear the form
-    document.getElementById('signupForm').reset();
+    $('signupForm').reset();
 
     alert('Signup successful! You can now log in.');
 });
 
 // Handle Login Form Submission
-document.getElementById('loginForm')?.addEventListener('submit', function(event) {
+$('loginForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
+    const email = $('email').value.trim();
+    const password = $('password').value;
 
-    if (email === "" || password === "") {
+    if (!email || !password) {
         alert('Please fill out all fields');
         return;
     }
@@ -81,36 +76,36 @@ if (window.location.pathname.endsWith('dashboard.html') && !isLoggedIn()) {
 }
 
 // Logout button functionality
-document.getElementById('logoutButton')?.addEventListener('click', logoutUser);
+$('logoutButton')?.addEventListener('click', logoutUser);
 
 // Handle Activity Form Submission
-document.getElementById('activityForm')?.addEventListener('submit', function(event) {
+$('activityForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const activityType = document.getElementById('activityType').value.trim();
-    const activityDuration = document.getElementById('activityDuration').value;
-    const activityDate = document.getElementById('activityDate').value;
+    const activityType = $('activityType').value.trim();
+    const activityDuration = $('activityDuration').value;
+    const activityDate = $('activityDate').value;
 
-    if (activityType === "" || activityDuration === "" || activityDate === "") {
+    if (!activityType || !activityDuration || !activityDate) {
         alert('Please fill out all fields');
         return;
     }
 
     // Add the activity to the recent activities list
-    const activityList = document.getElementById('activity-list');
+    const activityList = $('activity-list');
     const newActivity = document.createElement('li');
     newActivity.textContent = `${activityType} - ${activityDuration} minutes on ${activityDate}`;
     activityList.appendChild(newActivity);
 
     // Clear the form
-    document.getElementById('activityForm').reset();
+    $('activityForm').reset();
 });
 
 // Initialize Chart.js and render the chart
-const ctx = document.getElementById('activityChart')?.getContext('2d');
+const ctx = $('activityChart')?.getContext('2d');
 if (ctx) {
     const activityChart = new Chart(ctx, {
-        type: 'line', // Example chart type
+        type: 'line',
         data: {
             labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             datasets: [{
