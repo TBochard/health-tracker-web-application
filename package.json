@@ -1,1 +1,19 @@
 
+{
+  "name": "health-tracker-web-application",
+  "version": "1.0.0",
+  "description": "A web application for tracking health activities, calculating BMI, and displaying user metrics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testPathPattern=tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TBochard/health-tracker-web-application/tree/main"
+  },
+  "author": "TBochard",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.0"
+  }
+}
