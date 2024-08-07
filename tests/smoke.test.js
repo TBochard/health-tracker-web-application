@@ -1,5 +1,3 @@
-// smoke.test.js
-
 // Test that the home page loads successfully
 test('Home page loads successfully', () => {
     document.body.innerHTML = '<div id="root"></div>';
@@ -43,4 +41,5 @@ test('Navigation links are functional', () => {
 
     expect(homeLink.getAttribute('href')).toBe('index.html');
     expect(loginLink.getAttribute('href')).toBe('login.html');
-    expect(dashboardLink.getAttribute('href')).​⬤
+    expect(dashboardLink.getAttribute('href')).toBe('dashboard.html');
+});
