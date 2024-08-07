@@ -1,5 +1,3 @@
-// scripts.js
-
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -8,8 +6,14 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
+    // Basic validation
     if (password !== confirmPassword) {
         alert('Passwords do not match');
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address');
         return;
     }
 
@@ -25,3 +29,26 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 
     alert('Signup successful! You can now log in.');
 });
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (email === "" || password === "") {
+        alert('Please fill out all fields');
+        return;
+    }
+
+    // Simulate a login process
+    console.log('Login attempt:', { email, password });
+
+    alert('Login successful! Redirecting to your dashboard...');
+    window.location.href = 'dashboard.html';
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
