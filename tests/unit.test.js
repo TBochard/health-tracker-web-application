@@ -1,3 +1,7 @@
+
+/**
+ * @jest-environment jsdom
+ */
 const { calculateBMI, validateEmail, calculateCalories } = require('../js/scripts');
 
 // Test for accurate BMI calculation
