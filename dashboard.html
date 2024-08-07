@@ -18,6 +18,7 @@
             <a href="index.html">Signup</a>
             <a href="login.html">Login</a>
             <a href="dashboard.html">Dashboard</a>
+            <a href="activity.html">Log Activity</a> <!-- New link for activity logging -->
         </div>
     </div>
     
@@ -28,11 +29,11 @@
         <div class="metrics">
             <div class="metric-card">
                 <h3>BMI</h3>
-                <p>22.5</p>
+                <p id="bmi-display">-</p>
             </div>
             <div class="metric-card">
                 <h3>Calories Burned Today</h3>
-                <p>500 kcal</p>
+                <p id="calories-burned">0 kcal</p> <!-- Display will update dynamically -->
             </div>
         </div>
         
@@ -40,28 +41,10 @@
         <div class="recent-activities">
             <h3>Recent Activities</h3>
             <ul id="activity-list">
-                <li>Running - 30 minutes</li>
-                <li>Yoga - 45 minutes</li>
+                <!-- Activities will be dynamically added here -->
             </ul>
         </div>
 
-        <!-- Activity Logging Form -->
-        <div class="activity-logging">
-            <h3>Log a New Activity</h3>
-            <form id="activityForm">
-                <label for="activityType">Activity Type:</label>
-                <input type="text" id="activityType" name="activityType" required>
-
-                <label for="activityDuration">Duration (minutes):</label>
-                <input type="number" id="activityDuration" name="activityDuration" required>
-
-                <label for="activityDate">Date:</label>
-                <input type="date" id="activityDate" name="activityDate" required>
-
-                <button type="submit">Log Activity</button>
-            </form>
-        </div>
-        
         <!-- Data Visualization Section -->
         <div class="data-visualization">
             <h3>Your Activity Over Time</h3>
