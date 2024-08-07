@@ -1,1 +1,60 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Input</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Health Tracker - Log Activity</h1>
+    </header>
+
+    <div class="navbar">
+        <div class="navbar-brand">Health Tracker</div>
+        <div class="navbar-links">
+            <a href="index.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="activity.html">Log Activity</a> <!-- New link for activity logging -->
+        </div>
+    </div>
+    
+    <main>
+        <h2>Log a New Activity</h2>
+        <form id="activityForm">
+            <label for="activityType">Activity Type:</label>
+            <input type="text" id="activityType" name="activityType" required>
+
+            <label for="activityDuration">Duration (minutes):</label>
+            <input type="number" id="activityDuration" name="activityDuration" required>
+
+            <label for="activityDate">Date:</label>
+            <input type="date" id="activityDate" name="activityDate" required>
+
+            <button type="submit">Log Activity</button>
+        </form>
+
+        <h2>Calculate Your BMI</h2>
+        <form id="bmiForm">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        <p id="bmiResult"></p>
+    </main>
+
+    <footer>
+        &copy; 2024 Health Tracker. All rights reserved.
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
