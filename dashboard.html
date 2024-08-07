@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Tracker - Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -21,11 +21,56 @@
     <main>
         <section id="dashboard">
             <h2>Dashboard</h2>
-            <p>This is where you'll see your health metrics and activity logs.</p>
-            <!-- Placeholder content -->
-            <div class="overview">
-                <p>Overview of your health data will go here.</p>
+            
+            <!-- Health Metrics Section -->
+            <div class="metrics">
+                <div class="metric-card">
+                    <h3>BMI</h3>
+                    <p>22.5</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Calories Burned Today</h3>
+                    <p>500 kcal</p>
+                </div>
+                <!-- Add more metric cards as needed -->
             </div>
+            
+            <!-- Recent Activities Section -->
+            <div class="recent-activities">
+                <h3>Recent Activities</h3>
+                <ul id="activity-list">
+                    <!-- Placeholder for recent activities -->
+                    <li>Running - 30 minutes</li>
+                    <li>Yoga - 45 minutes</li>
+                    <!-- Future activities will be dynamically added here -->
+                </ul>
+            </div>
+
+            <!-- Activity Logging Form -->
+            <div class="activity-logging">
+                <h3>Log a New Activity</h3>
+                <form id="activityForm">
+                    <label for="activityType">Activity Type:</label>
+                    <input type="text" id="activityType" name="activityType" required>
+
+                    <label for="activityDuration">Duration (minutes):</label>
+                    <input type="number" id="activityDuration" name="activityDuration" required>
+
+                    <label for="activityDate">Date:</label>
+                    <input type="date" id="activityDate" name="activityDate" required>
+
+                    <button type="submit">Log Activity</button>
+                </form>
+            </div>
+            
+            <!-- Data Visualization Section -->
+            <div class="data-visualization">
+                <h3>Your Activity Over Time</h3>
+                <canvas id="activityChart" width="400" height="200"></canvas>
+                <!-- Placeholder for future data visualization -->
+            </div>
+
+            <button id="logoutButton">Logout</button>
         </section>
     </main>
 
@@ -33,6 +78,8 @@
         &copy; 2024 Health Tracker. All rights reserved.
     </footer>
 
+    <!-- Load external scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
