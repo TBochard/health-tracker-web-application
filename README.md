@@ -1,7 +1,7 @@
 # Software Engineering Summative 1 - Health Tracker Web App
-![WebApp](https://github.com/TBochard/health-tracker-web-application/blob/main/images/Screenshot%202024-08-09%20at%2019.41.29.png)
+![WebApp](https://github.com/TBochard/health-tracker-web-application/blob/main/images/Dashboard.png)
 
-### Purpose
+## Purpose
 The Health Tracker Web Application promotes healthy lifestyles by providing users with tools to track their health-related activities, calculate BMI, and visualize their progress over time. It aims to help individuals manage their health data in an organized and accessible manner.
 
 ### Key Features
@@ -9,7 +9,7 @@ The Health Tracker Web Application promotes healthy lifestyles by providing user
 - **BMI Calculation:** The app includes a feature for calculating Body Mass Index (BMI) based on user input.
 - **Data Visualization:** Users can view their health data in real-time with dynamic visualizations to track progress and identify trends.
 
-### Application Requirements
+## Application Requirements
 This app encompasses both functional and non-functional requirements which can be tested to guarantee that it fulfills user requirements and functions as anticipated.
 
 #### Functional Requirements
@@ -45,11 +45,11 @@ This app encompasses both functional and non-functional requirements which can b
 ### Wireframes and Mockups
 Included are the initial wireframes and mockups that guided the design process. These were refined based on user feedback to ensure the app is both functional and visually appealing.
 
-[Initial Design](https://github.com/TBochard/health-tracker-web-application/blob/main/images/Screenshot%202024-08-09%20at%2019.55.11.png)
+![Initial Design](https://github.com/TBochard/health-tracker-web-application/blob/main/images/InitialDesign.png)
 
 The Health Tracker Web Application's design was created using Figma. It began with wireframes to outline the basic structure and then progressed to high-fidelity mockups that integrated user feedback. Figma's auto-layout feature was used to develop components, ensuring a responsive design. Interactive prototypes were tested to guarantee a seamless user experience. To adhere to WCAG 2.1 accessibility standards, the design emphasizes high colour contrast, clear focus states for keyboard navigation, and consistent, scalable text. Alt text placeholders were also included for images, and the overall navigation was structured to be intuitive and accessible on all devices. This comprehensive process guarantees that the application is functional and inclusive for all users.
 
-### Prerequisites
+## Prerequisites
 
 - Node.js
 - npm (Node Package Manager)
@@ -88,3 +88,22 @@ The Health Tracker Web Application's design was created using Figma. It began wi
    ```sh
    npm install
    ```
+
+## Usage
+
+
+### Accessing the Deployed Application
+
+Visit the deployed application here. [WebApp](https://tbochard.github.io/health-tracker-web-application/dashboard.html)
+
+### Running Locally
+
+Download all the files and open index.html in your preferred web browser.
+
+### Using the application
+	1.	Login: Enter your username and password to access your dashboard.
+	2.	Sign Up: Create an account to start logging your health activities.
+	3.	Log Activities: Enter the type, date, and duration of your activities.
+	4.	Calculate BMI: Input your height and weight to calculate and store your BMI.
+	5.	View Dashboard: Monitor your logged activities and BMI over time through the dashboard interface.
+
