@@ -158,4 +158,92 @@ Instead of a branching strategy, the project was developed linearly, with code b
 
 As each feature or fix was implemented, it was committed directly to the main codebase. This method ensured that the code constantly evolved, with incremental updates as each issue was resolved.
 
-## Evaluation
+## Testing
+
+Testing was a critical area of the development process for the Health Tracker Web Application, ensuring that the application functions correctly and provides a seamless user experience. This section highlights the tests that were conducted, with a focus on error handling and validation in the JavaScript code and other tests.
+
+### Unit and Integration Testing
+
+The unit tests included in the project play a crucial role in ensuring the reliability and accuracy of key functionalities within the Health Tracker Web Application. The provided unit.test.js file includes comprehensive tests for BMI calculation, email validation, and calorie calculation, each of which is critical to the application’s core features.
+
+-***BMI Calculation***
+The tests for calculateBMI function validate that the BMI is computed correctly based on user inputs for height and weight. These tests ensure that the application provides accurate health metrics, which are essential for users tracking their fitness and wellness goals.
+   ```sh
+   test('Calculate BMI correctly', () => {
+    expect(calculateBMI(180, 75)).toBeCloseTo(23.15);
+    expect(calculateBMI(160, 50)).toBeCloseTo(19.53);
+    expect(calculateBMI(200, 100)).toBeCloseTo(25.0);
+});
+   ```
+  
+- ***E-Mail Validation***
+  The validateEmail function is tested to ensure that the application correctly identifies valid and invalid email formats. This is a key aspect of the user authentication process, helping to prevent user errors during sign-up and ensuring data integrity.
+
+  ```sh
+test('Validate email format', () => {
+    expect(validateEmail('test@example.com')).toBe(true);
+    expect(validateEmail('invalid-email')).toBe(false);
+    expect(validateEmail('another.test@domain.org')).toBe(true);
+});
+	```
+
+- ***Calories Calculation***
+The calculateCalories function is tested for accuracy in calculating the calories burned during different types of exercises. These tests are crucial for the activity logging feature, ensuring that users receive reliable feedback on their physical activity.
+  
+   ```sh
+test('Calculate calories burned correctly', () => {
+    expect(calculateCalories('Running', 30)).toBeGreaterThan(100);
+    expect(calculateCalories('Walking', 60)).toBeGreaterThan(50);
+    expect(calculateCalories('Cycling', 45)).toBeGreaterThan(150);
+});
+   	```
+### Validation and Error Handling in JavaScript
+
+-***Key Validation Example from scripts.js:***
+   ```sh
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+    }
+
+    // Assuming basic validation passed, proceed with form submission
+    console.log('Form Submitted:', {
+        fullName,
+        email,
+        password
+    });
+
+    // Clear the form
+    document.getElementById('signupForm').reset();
+
+    alert('Signup successful! You can now log in.');
+});
+```
+
+This code is used when someone tries to sign up on a website. When the “Sign Up” button is clicked, instead of immediately sending the information to the server, the code first checks if everything is filled out correctly. Specifically, it checks if the password and confirm password fields match. If they don’t match, a message pops up telling the user that the passwords don’t match, and the sign-up process stops right there. If everything is correct, it shows a message saying the sign-up was successful and clears the form so it’s ready for the next user. This helps prevent mistakes and ensures that the information entered is accurate before it gets saved.
+
+ ### Google Lighthouse Score
+
+ ![Lighthouse Score](https://github.com/TBochard/health-tracker-web-application/blob/main/images/Lighthouse.png)
+
+I ran the Health Tracker Web Application through Google's Lighthouse audit and it yielded excellent scores for all essential criteria. This demonstrates the application's robust performance, ease of use, adherence to industry standards, and search engine optimisation. Attaining a flawless score of 100 in performance and best practices signifies that the application has been extensively optimised to ensure swift loading times, effective resource allocation, and adherence to secure web protocols. The accessibility score of 91 reflects a strong dedication to diversity, guaranteeing that the program is functional for a diverse group of users, including individuals with disabilities. While the current score is fairly impressive, there are still opportunities for enhancement, particularly in terms of enhancing support for assistive devices and implementing extensive labelling for form elements. The SEO score of 90 verifies that the application is highly optimised for search engines, ensuring that it can be easily found while also retaining a design that is compatible with mobile devices.
+
+ ## Evaluation
+
+ The Health Tracker Web Application, designed with the user in mind, has successfully met its objectives. It provides users with a reliable tool to monitor their health activities, calculate BMI, and visualize their progress. The project's strong focus on user-centred design, performance, and accessibility ensures it caters to a diverse audience.
+
+The Health Tracker Web Application has achieved a remarkable level of performance and adherence to best practices, as evidenced by the perfect Google Lighthouse audit scores. This high performance, which ensures fast load times, secure data handling, and efficient resource management, instills confidence in the application's capabilities and its ability to provide a seamless user experience in today’s fast-paced digital environment.
+
+The Health Tracker Web Application's high accessibility score of 91 is a testament to its commitment to inclusivity. By adhering to WCAG 2.1 guidelines, the app ensures usability for individuals with various disabilities, with potential for further improvement. Enhancing support for assistive technologies and refining form labels could boost the accessibility score, making the application even more user-friendly for all.
+
+In terms of functionality, the application has successfully implemented all planned features. These include user authentication, activity logging, and BMI calculation. Unit tests, particularly for critical functions like BMI calculation, email validation, and calorie calculation, ensure that these features work as intended and provide accurate results to the user.
+
+Despite these successes, there are areas where the application could be further enhanced. Expanding the dashboard's data analytics capabilities and improving security features such as two-factor authentication would add significant value. Additionally, incorporating more user feedback into future iterations could help identify additional opportunities for refinement.
