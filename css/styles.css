@@ -1,4 +1,5 @@
 :root {
+    /* Define global CSS variables for colors, border-radius, shadows, font, and transitions */
     --primary-color: #007BFF;
     --secondary-color: #333;
     --accent-color: #FFD700;
@@ -13,22 +14,25 @@
 }
 
 * {
+    /* Apply box-sizing to include padding and border in element's width/height; reset margin and padding */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
+    /* Set global styles for the body, including font, background color, text color, and layout */
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure body covers the full viewport height */
 }
 
 header, footer, .navbar {
+    /* Set styles for header, footer, and navigation bar: full width, primary color, white text, and shadow */
     width: 100%;
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -38,23 +42,27 @@ header, footer, .navbar {
 }
 
 header {
+    /* Make the header sticky so it stays visible at the top when scrolling */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 h1 {
+    /* Style for main heading: font size and weight */
     font-size: 2rem;
     font-weight: 700;
 }
 
 h2 {
+    /* Style for subheadings: font size, weight, and margin */
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 main {
+    /* Style the main content area: width, background, padding, margin, border-radius, and shadow */
     width: 100%;
     max-width: 900px;
     background: var(--white-color);
@@ -62,14 +70,16 @@ main {
     margin: 60px auto;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    transition: box-shadow var(--transition);
+    transition: box-shadow var(--transition); /* Smooth transition for box-shadow */
 }
 
 main:hover {
+    /* Add a deeper shadow when the main content is hovered */
     box-shadow: var(--hover-shadow);
 }
 
 form {
+    /* Set up form layout with flexbox, gaps between elements, and left-aligned text */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -77,41 +87,48 @@ form {
 }
 
 label, input, button, input[type="submit"] {
+    /* Apply a consistent font size and border-radius to form elements */
     font-size: 1rem;
     border-radius: var(--border-radius);
 }
 
 input, button, input[type="submit"] {
+    /* Style form inputs and buttons with padding, border, and transition effects */
     padding: 12px;
     border: 1px solid #ddd;
     transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 input:focus, button:focus, input[type="submit"]:focus {
+    /* Highlight inputs and buttons when focused, with a blue border and subtle shadow */
     border-color: var(--primary-color);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-    outline: none;
+    outline: none; /* Remove default focus outline */
 }
 
 button, input[type="submit"] {
+    /* Style buttons and submit inputs with a primary color, white text, no border, and cursor pointer */
     background-color: var(--primary-color);
     color: var(--white-color);
     border: none;
     cursor: pointer;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Add shadow for depth */
 }
 
 button:hover, input[type="submit"]:hover {
+    /* Change button color and deepen shadow on hover */
     background-color: #0056b3;
     box-shadow: var(--hover-shadow);
 }
 
 button:active, input[type="submit"]:active {
+    /* Darken button color and reduce shadow when active (clicked) */
     background-color: #004494;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
+    /* Style navbar to be flexible, sticky, and consistently colored */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,18 +140,21 @@ button:active, input[type="submit"]:active {
 }
 
 .navbar a {
+    /* Style links within the navbar with white color, no text decoration, margin, and transition */
     color: var(--white-color);
     text-decoration: none;
     margin: 0 15px;
     font-size: 1rem;
-    transition: color var(--transition);
+    transition: color var(--transition); /* Smooth color transition on hover */
 }
 
 .navbar a:hover {
+    /* Change link color to accent color on hover */
     color: var(--accent-color);
 }
 
 .navbar .navbar-brand {
+    /* Style the brand/logo in the navbar with a larger font size and bold weight */
     font-size: 1.5rem;
     font-weight: bold;
     flex-grow: 1;
@@ -142,6 +162,7 @@ button:active, input[type="submit"]:active {
 }
 
 .navbar .navbar-links {
+    /* Align navbar links to the right, with flexbox settings */
     display: flex;
     align-items: center;
     flex-grow: 2;
@@ -149,6 +170,7 @@ button:active, input[type="submit"]:active {
 }
 
 @media (max-width: 768px) {
+    /* Responsive design for smaller screens: stack navbar elements vertically */
     .navbar {
         flex-direction: column;
         padding: 10px;
@@ -161,17 +183,20 @@ button:active, input[type="submit"]:active {
     }
 
     .navbar a {
+        /* Adjust link margin for smaller screens */
         margin: 5px 0;
     }
 }
 
 footer {
+    /* Style footer with small font size, top margin for spacing, and shadow */
     font-size: 0.9rem;
     margin-top: auto;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Subtle top shadow for separation */
 }
 
 .metrics {
+    /* Set up a flexbox grid for metric cards with gap between them */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -179,6 +204,7 @@ footer {
 }
 
 .metric-card {
+    /* Style individual metric cards with background, padding, border-radius, shadow, and effects */
     flex: 1 1 calc(33.333% - 20px);
     background-color: var(--white-color);
     padding: 20px;
@@ -189,37 +215,44 @@ footer {
 }
 
 .metric-card:hover {
+    /* Slightly lift the card and shadow on hover */
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
 }
 
 .metric-card h3 {
+    /* Style card titles with primary color and larger font size */
     margin-top: 0;
     font-size: 1.2rem;
     color: var(--primary-color);
 }
 
 .metric-card p {
+    /* Style the metric values with larger font size and margin */
     font-size: 2rem;
     margin: 10px 0 0;
 }
 
 @media (max-width: 768px) {
+    /* Make metric cards full-width on smaller screens */
     .metric-card {
         flex: 1 1 100%;
     }
 }
 
 .recent-activities, .activity-logging, .data-visualization {
+    /* Add top margin to sections for spacing */
     margin-top: 30px;
 }
 
 .recent-activities ul, .recent-activities li {
+    /* Remove default list styles and padding for recent activities list */
     list-style-type: none;
     padding: 0;
 }
 
 .recent-activities li {
+    /* Style individual recent activity items with background, padding, border-radius, shadow, and effects */
     background-color: var(--white-color);
     padding: 15px;
     margin-bottom: 10px;
@@ -229,11 +262,13 @@ footer {
 }
 
 .recent-activities li:hover {
+    /* Slightly shift the item to the right and  shadow on hover */
     transform: translateX(5px);
     box-shadow: var(--hover-shadow);
 }
 
 canvas {
+    /* Style canvas elements with full width, rounded corners, shadow, and  effects */
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
@@ -243,5 +278,7 @@ canvas {
 }
 
 canvas:hover {
-    box-shadow: var(--hover-shadow);
+    /*  shadow on hover for canvas elements */
+box-shadow: var(–hover-shadow);
 }
+   
