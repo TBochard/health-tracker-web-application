@@ -107,3 +107,9 @@ Download all the files and open index.html in your preferred web browser.
 	4.	Calculate BMI: Input your height and weight to calculate and store your BMI.
 	5.	View Dashboard: Monitor your logged activities and BMI over time through the dashboard interface.
 
+### Running Tests
+   ```sh
+   npm test
+   ```
+
+
