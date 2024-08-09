@@ -47,3 +47,44 @@ Included are the initial wireframes and mockups that guided the design process. 
 
 [Initial Design](https://github.com/TBochard/health-tracker-web-application/blob/main/images/Screenshot%202024-08-09%20at%2019.55.11.png)
 
+The Health Tracker Web Application's design was created using Figma. It began with wireframes to outline the basic structure and then progressed to high-fidelity mockups that integrated user feedback. Figma's auto-layout feature was used to develop components, ensuring a responsive design. Interactive prototypes were tested to guarantee a seamless user experience. To adhere to WCAG 2.1 accessibility standards, the design emphasizes high colour contrast, clear focus states for keyboard navigation, and consistent, scalable text. Alt text placeholders were also included for images, and the overall navigation was structured to be intuitive and accessible on all devices. This comprehensive process guarantees that the application is functional and inclusive for all users.
+
+### Prerequisites
+
+- Node.js
+- npm (Node Package Manager)
+- A modern web browser (e.g., Chrome, Firefox, Edge)
+
+### Installation
+
+1. Ensure node is installed:
+
+   ```sh
+   node -v
+   ```
+
+   if not already installed, click [here](https://nodejs.org/en/download/package-manager) to install Node
+
+2. Ensure npm is installed:
+
+   ```sh
+   npm -v
+   ```
+
+3. Clone the repository:
+
+   ```sh
+   git clone https://github.com/HaseebAhmed6/bmi-calculator.git
+   ```
+
+4. Navigate to the project directory:
+
+   ```sh
+   cd bmi-calculator
+   ```
+
+5. Install the dependencies:
+
+   ```sh
+   npm install
+   ```
