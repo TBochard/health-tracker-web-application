@@ -47,7 +47,18 @@ Included are the initial wireframes and mockups that guided the design process. 
 
 ![Initial Design](https://github.com/TBochard/health-tracker-web-application/blob/main/images/InitialDesign.png)
 
-The Health Tracker Web Application's design was created using Figma. It began with wireframes to outline the basic structure and then progressed to high-fidelity mockups that integrated user feedback. Figma's auto-layout feature was used to develop components, ensuring a responsive design. Interactive prototypes were tested to guarantee a seamless user experience. To adhere to WCAG 2.1 accessibility standards, the design emphasizes high colour contrast, clear focus states for keyboard navigation, and consistent, scalable text. Alt text placeholders were also included for images, and the overall navigation was structured to be intuitive and accessible on all devices. This comprehensive process guarantees that the application is functional and inclusive for all users.
+The design process began with the creation of low-fidelity wireframes to outline the basic structure of the application. These wireframes focused on the layout of key components such as the login page, dashboard, sign-up form, and activity logging interface.
+
+Once the wireframes were finalized, high-fidelity mockups were created to refine the visual design. These mockups included detailed styling, color schemes, typography, and interactive elements such as buttons and form inputs.
+
+The final design was chosen based on user feedback, emphasizing a layout that is both visually appealing and easy to navigate. The design ensures accessibility, with careful attention to color contrast and layout, adhering to WCAG 2.1 guidelines.
+
+### UI/UX Considerations
+The user interface (UI) was designed with simplicity and ease of use in mind. The goal was to create an application that users could navigate without extensive instructions. Key UI/UX considerations included:
+- **Accessibility:** The design adheres to WCAG 2.1 guidelines to ensure that the application is accessible to users with disabilities. This includes providing sufficient color contrast, keyboard navigation, and screen reader compatibility.
+- **Responsiveness:** The application was designed using a mobile-first approach, ensuring that it is fully functional on devices of all sizes. This was achieved using responsive design techniques such as flexible grid layouts and media queries.
+- **Consistency:** The design maintains a consistent visual language across all pages, with uniform typography, color schemes, and button styles. This consistency helps users navigate the application more easily.
+- **Feedback:** The application provides real-time feedback to users, such as error messages for invalid inputs or confirmation messages for successful actions. This helps users understand the impact of their interactions with the application.
 
 ## Prerequisites
 
@@ -112,4 +123,39 @@ Download all the files and open index.html in your preferred web browser.
    npm test
    ```
 
+## Project Management
 
+The development of the Health Tracker Web Application was managed using Agile methodology, specifically through a series of sprints that allowed for iterative development and continuous feedback.
+
+### Agile Methodology
+
+The project was divided into sprints, each focusing on specific aspects of the application. For example, the first sprint focused on setting up the project structure and implementing basic user authentication. In contrast, subsequent sprints focused on adding features such as activity logging, BMI calculation, and dashboard visualization. At the end of each sprint, a review was conducted to assess the progress and plan for the next sprint.
+
+### GitHub Project Board
+GitHub Projects was used to manage tasks and track progress. A Kanban board with columns for different stages of development, such as “Backlog,” “In Progress,” “In Review,” and “Done,” was set up. This structure not only provided a clear overview of the project’s status but also kept stakeholders informed and updated about the progress.
+
+Each task on the Kanban board was represented by a GitHub issue, including a detailed description, acceptance criteria, and relevant links or references. Tasks were assigned to team members and moved across the board as they progressed through the development pipeline. The process of moving tasks involved updating the task status, which was done by the team member responsible for the task.
+
+### Development Process
+
+The development process for the Health Tracker Web Application followed modern web development practices, including Test-Driven Development (TDD), continuous integration, and version control.
+
+### Technical Implementation
+
+The application was built using HTML, CSS, and JavaScript. The front-end was designed to be lightweight and fast, with a focus on performance and responsiveness. JavaScript handled user interactions, such as form submissions and data processing.
+
+### Test-Driven Development (TDD)
+
+The development process followed TDD practices, where unit tests were written before the implementation of features. This approach ensured the code was thoroughly tested and met the specified requirements. Unit tests were written for all major functionalities, including user authentication, activity logging, and BMI calculation.
+
+### Continuous Integration (CI)
+
+Continuous integration was set up using GitHub Actions, which automatically ran tests whenever new code was committed. This ensured that all code changes were thoroughly tested, reducing the risk of introducing bugs into the production environment.
+
+### Issue Management and Sequential Development
+
+Instead of a branching strategy, the project was developed linearly, with code being committed sequentially as issues were addressed. Each issue was tackled one by one, following a prioritized order. This approach allowed for continuous development without the overhead of managing multiple branches.
+
+As each feature or fix was implemented, it was committed directly to the main codebase. This method ensured that the code constantly evolved, with incremental updates as each issue was resolved.
+
+## Evaluation
