@@ -74,7 +74,7 @@ The Health Tracker Web Application's design was created using Figma. It began wi
 3. Clone the repository:
 
    ```sh
-   git clone https://github.com/HaseebAhmed6/bmi-calculator.git
+   git clone https://github.com/TBochard/health-tracker-web-application.git
    ```
 
 4. Navigate to the project directory:
